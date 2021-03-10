@@ -13,16 +13,13 @@ struct LoginView: View {
     @State private var serverip = ""
     @State private var username = ""
     @State private var password = ""
-    @State var homeViewActivated: Bool = false
+    @Binding var homeViewActivated: Bool
     @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
             VStack() {
                 VStack() {
-                    NavigationLink(destination: HomeView(), isActive: $homeViewActivated) {
-                        EmptyView()
-                    }
                     HStack {
                         Spacer()
                     }
@@ -114,11 +111,5 @@ struct LoginView: View {
             .edgesIgnoringSafeArea([.top, .bottom])
             .navigationBarBackButtonHidden(true)
         }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

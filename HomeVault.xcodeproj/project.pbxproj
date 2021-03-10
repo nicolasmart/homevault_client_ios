@@ -19,6 +19,7 @@
 		395D290B25F6AFB900D63EF4 /* AppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 395D290A25F6AFB900D63EF4 /* AppSettings.bundle */; };
 		395D291025F6B08900D63EF4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D290F25F6B08900D63EF4 /* LoginView.swift */; };
 		395D291525F6C98900D63EF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D291425F6C98900D63EF4 /* LoginViewController.swift */; };
+		3990DE6B25F8B4C1001712CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990DE6A25F8B4C1001712CC /* SettingsView.swift */; };
 		39FF89D925F69AA400E98BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FF89D825F69AA400E98BF1 /* AppDelegate.swift */; };
 		39FF89DB25F69AA400E98BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FF89DA25F69AA400E98BF1 /* SceneDelegate.swift */; };
 		39FF89DD25F69AA400E98BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FF89DC25F69AA400E98BF1 /* HomeView.swift */; };
@@ -59,6 +60,7 @@
 		395D290A25F6AFB900D63EF4 /* AppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppSettings.bundle; sourceTree = "<group>"; };
 		395D290F25F6B08900D63EF4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		395D291425F6C98900D63EF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3990DE6A25F8B4C1001712CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		39FF89D525F69AA400E98BF1 /* HomeVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FF89D825F69AA400E98BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39FF89DA25F69AA400E98BF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3950FD4525F8070F00F0E2C0 /* ImageLoader.swift */,
 				3950FD4A25F80C2600F0E2C0 /* ImagePreview.swift */,
 				3950FD4F25F80DF400F0E2C0 /* ZoomableView.swift */,
+				3990DE6925F8B497001712CC /* Settings */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -127,6 +130,14 @@
 				3950FD3125F7D49D00F0E2C0 /* DirectoryCreateView.swift */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		3990DE6925F8B497001712CC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3990DE6A25F8B4C1001712CC /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		39FF89CC25F69AA400E98BF1 = {
@@ -336,6 +347,7 @@
 				395D291025F6B08900D63EF4 /* LoginView.swift in Sources */,
 				3950FD4625F8070F00F0E2C0 /* ImageLoader.swift in Sources */,
 				3950FD3225F7D49D00F0E2C0 /* DirectoryCreateView.swift in Sources */,
+				3990DE6B25F8B4C1001712CC /* SettingsView.swift in Sources */,
 				39FF89DD25F69AA400E98BF1 /* HomeView.swift in Sources */,
 				3950FD2425F7AF8200F0E2C0 /* SubdirectoryTreeView.swift in Sources */,
 				3950FD2A25F7BD7F00F0E2C0 /* UserDefaults+UniversalRW.swift in Sources */,

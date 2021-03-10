@@ -10,75 +10,86 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selection = 0
- 
+    @State var isLoggedIn = false
+     
     var body: some View {
-        TabView(selection: $selection){
-            DirectoryTreeView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "folder")
-                        Text("Files")
+        Group {
+        if isLoggedIn {
+            TabView(selection: $selection){
+                DirectoryTreeView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "folder")
+                            Text("Files")
+                        }
                     }
-                }
-                .tag(0)
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .edgesIgnoringSafeArea([.top, .bottom])
-                .navigationBarBackButtonHidden(true)
-            GalleryView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "photo")
-                        Text("Gallery")
+                    .tag(0)
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("")
+                    .edgesIgnoringSafeArea([.top, .bottom])
+                    .navigationBarBackButtonHidden(true)
+                GalleryView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "photo")
+                            Text("Gallery")
+                        }
                     }
-                }
-                .tag(1)
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .edgesIgnoringSafeArea([.top, .bottom])
-                .navigationBarBackButtonHidden(true)
-            Text("Third View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "music.note.list")
-                        Text("Music")
+                    .tag(1)
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("")
+                    .edgesIgnoringSafeArea([.top, .bottom])
+                    .navigationBarBackButtonHidden(true)
+                Text("Third View")
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "music.note.list")
+                            Text("Music")
+                        }
                     }
-                }
-                .tag(2)
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .edgesIgnoringSafeArea([.top, .bottom])
-                .navigationBarBackButtonHidden(true)
-            Text("Fourth View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "square.and.pencil")
-                        Text("Notes")
+                    .tag(2)
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("")
+                    .edgesIgnoringSafeArea([.top, .bottom])
+                    .navigationBarBackButtonHidden(true)
+                Text("Fourth View")
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "square.and.pencil")
+                            Text("Notes")
+                        }
                     }
-                }
-                .tag(3)
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .edgesIgnoringSafeArea([.top, .bottom])
-                .navigationBarBackButtonHidden(true)
-            Text("Fifth View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "gear")
-                        Text("Settings")
+                    .tag(3)
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("")
+                    .edgesIgnoringSafeArea([.top, .bottom])
+                    .navigationBarBackButtonHidden(true)
+                SettingsView(isLoggedIn: $isLoggedIn)
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "gear")
+                            Text("Settings")
+                        }
                     }
-                }
-                .tag(4)
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .edgesIgnoringSafeArea([.top, .bottom])
-                .navigationBarBackButtonHidden(true)
+                    .tag(4)
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("")
+                    .edgesIgnoringSafeArea([.top, .bottom])
+                    .navigationBarBackButtonHidden(true)
+            }
+        } else {
+            LoginView(homeViewActivated: $isLoggedIn)
         }
+        }.onAppear(perform: {
+            if UserDefaults.standard.isLoggedIn() {
+                isLoggedIn = true
+            }
+        })
     }
 }
 

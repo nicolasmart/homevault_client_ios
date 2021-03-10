@@ -27,4 +27,10 @@ extension UserDefaults{
     func getLoginInfo(key: String) -> String{
         return string(forKey: key) ?? ""
     }
+    
+    func logout() {
+        removeObject(forKey: "server_ip")
+        removeObject(forKey: "username")
+        removeObject(forKey: "password")
+    }
 }
