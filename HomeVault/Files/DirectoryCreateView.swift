@@ -27,7 +27,7 @@ struct DirectoryCreateView: View {
                  },
             trailing:
                  Button("Create") {
-                    let serverUrl = URL(string: "http://" + UserDefaults.standard.getLoginInfo(key: "server_ip") + "/mobile_methods/file_create_dir.php")
+                    let serverUrl = URL(string: UserDefaults.standard.getLoginInfo(key: "server_ip") + "/mobile_methods/file_create_dir.php")
                     var request = URLRequest(url:serverUrl!)
                     request.httpMethod = "POST"
                     let postString = "username=" + UserDefaults.standard.getLoginInfo(key: "username") + "&password=" + UserDefaults.standard.getLoginInfo(key: "password") + "&directory=" + directory + folder_name

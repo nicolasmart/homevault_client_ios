@@ -56,7 +56,7 @@ struct GalleryView: View {
         //password = UserDefaults.standard.string(forKey: "password")!
         
         
-        let serverUrl = URL(string: "http://" + serverip + "/mobile_methods/gallery_fetch.php")
+        let serverUrl = URL(string: serverip + "/mobile_methods/gallery_fetch.php")
         
         var request = URLRequest(url:serverUrl!)
                 
@@ -87,7 +87,7 @@ struct GalleryView: View {
                         let jsonArray = jsonResponse as? [String]
                         
                         for jsonElement in jsonArray ?? [] {
-                            photos.append("http://" + serverip + "/users/" + username + "/photos/" + jsonElement)
+                            photos.append(serverip + "/users/" + username + "/photos/" + jsonElement)
                         }
                         return
                     } catch {

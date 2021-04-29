@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3929F98D263B411B00F34FA4 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F98C263B411B00F34FA4 /* MusicView.swift */; };
 		3950FD2425F7AF8200F0E2C0 /* SubdirectoryTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950FD2325F7AF8200F0E2C0 /* SubdirectoryTreeView.swift */; };
 		3950FD2A25F7BD7F00F0E2C0 /* UserDefaults+UniversalRW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950FD2925F7BD7F00F0E2C0 /* UserDefaults+UniversalRW.swift */; };
 		3950FD3225F7D49D00F0E2C0 /* DirectoryCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950FD3125F7D49D00F0E2C0 /* DirectoryCreateView.swift */; };
@@ -19,6 +20,10 @@
 		395D290B25F6AFB900D63EF4 /* AppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 395D290A25F6AFB900D63EF4 /* AppSettings.bundle */; };
 		395D291025F6B08900D63EF4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D290F25F6B08900D63EF4 /* LoginView.swift */; };
 		395D291525F6C98900D63EF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D291425F6C98900D63EF4 /* LoginViewController.swift */; };
+		397E41682632149900140A84 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E41672632149900140A84 /* WebViewCoordinator.swift */; };
+		397E416A263214C000140A84 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E4169263214C000140A84 /* WebViewModel.swift */; };
+		397E416C263214D500140A84 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E416B263214D500140A84 /* WebViewContainer.swift */; };
+		397E416E263215CF00140A84 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E416D263215CF00140A84 /* NotesView.swift */; };
 		3990DE6B25F8B4C1001712CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990DE6A25F8B4C1001712CC /* SettingsView.swift */; };
 		39FF89D925F69AA400E98BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FF89D825F69AA400E98BF1 /* AppDelegate.swift */; };
 		39FF89DB25F69AA400E98BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FF89DA25F69AA400E98BF1 /* SceneDelegate.swift */; };
@@ -48,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3929F98C263B411B00F34FA4 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		3950FD2325F7AF8200F0E2C0 /* SubdirectoryTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubdirectoryTreeView.swift; sourceTree = "<group>"; };
 		3950FD2925F7BD7F00F0E2C0 /* UserDefaults+UniversalRW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UniversalRW.swift"; sourceTree = "<group>"; };
 		3950FD3125F7D49D00F0E2C0 /* DirectoryCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCreateView.swift; sourceTree = "<group>"; };
@@ -60,6 +66,10 @@
 		395D290A25F6AFB900D63EF4 /* AppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppSettings.bundle; sourceTree = "<group>"; };
 		395D290F25F6B08900D63EF4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		395D291425F6C98900D63EF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		397E41672632149900140A84 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
+		397E4169263214C000140A84 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		397E416B263214D500140A84 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		397E416D263215CF00140A84 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		3990DE6A25F8B4C1001712CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		39FF89D525F69AA400E98BF1 /* HomeVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FF89D825F69AA400E98BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3950FD2925F7BD7F00F0E2C0 /* UserDefaults+UniversalRW.swift */,
+				397E41672632149900140A84 /* WebViewCoordinator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,6 +176,8 @@
 			children = (
 				395D290425F6AD9500D63EF4 /* Files */,
 				3950FD3C25F7F66E00F0E2C0 /* Gallery */,
+				397E416D263215CF00140A84 /* NotesView.swift */,
+				3929F98C263B411B00F34FA4 /* MusicView.swift */,
 				39FF89D825F69AA400E98BF1 /* AppDelegate.swift */,
 				39FF89DA25F69AA400E98BF1 /* SceneDelegate.swift */,
 				39FF89DC25F69AA400E98BF1 /* HomeView.swift */,
@@ -177,6 +190,8 @@
 				395D290F25F6B08900D63EF4 /* LoginView.swift */,
 				395D291425F6C98900D63EF4 /* LoginViewController.swift */,
 				3950FD2825F7BD6700F0E2C0 /* Extensions */,
+				397E4169263214C000140A84 /* WebViewModel.swift */,
+				397E416B263214D500140A84 /* WebViewContainer.swift */,
 			);
 			path = HomeVault;
 			sourceTree = "<group>";
@@ -341,11 +356,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				395D291525F6C98900D63EF4 /* LoginViewController.swift in Sources */,
+				3929F98D263B411B00F34FA4 /* MusicView.swift in Sources */,
 				39FF89D925F69AA400E98BF1 /* AppDelegate.swift in Sources */,
 				39FF89DB25F69AA400E98BF1 /* SceneDelegate.swift in Sources */,
 				395D290625F6AE3600D63EF4 /* DirectoryTreeView.swift in Sources */,
 				395D291025F6B08900D63EF4 /* LoginView.swift in Sources */,
+				397E416C263214D500140A84 /* WebViewContainer.swift in Sources */,
+				397E41682632149900140A84 /* WebViewCoordinator.swift in Sources */,
 				3950FD4625F8070F00F0E2C0 /* ImageLoader.swift in Sources */,
+				397E416E263215CF00140A84 /* NotesView.swift in Sources */,
+				397E416A263214C000140A84 /* WebViewModel.swift in Sources */,
 				3950FD3225F7D49D00F0E2C0 /* DirectoryCreateView.swift in Sources */,
 				3990DE6B25F8B4C1001712CC /* SettingsView.swift in Sources */,
 				39FF89DD25F69AA400E98BF1 /* HomeView.swift in Sources */,

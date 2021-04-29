@@ -37,7 +37,7 @@ struct SubdirectoryTreeView: View {
             }
             ForEach(fileNames, id: \.self) { file in
                 Button (action: {
-                    downloadSelected(url: URL(string: "http://" + serverip + "/mobile_methods/file_download.php")!, name: file)
+                    downloadSelected(url: URL(string: serverip + "/mobile_methods/file_download.php")!, name: file)
                     
                 }) {
                     HStack {
@@ -85,7 +85,7 @@ struct SubdirectoryTreeView: View {
         fileNames.removeAll()
         folderNames.removeAll()
         
-        let serverUrl = URL(string: "http://" + serverip + "/mobile_methods/file_fetch_dir.php")
+        let serverUrl = URL(string: serverip + "/mobile_methods/file_fetch_dir.php")
         
         var request = URLRequest(url:serverUrl!)
                 

@@ -42,7 +42,7 @@ struct HomeView: View {
                     .navigationBarTitle("")
                     .edgesIgnoringSafeArea([.top, .bottom])
                     .navigationBarBackButtonHidden(true)
-                Text("Third View")
+                MusicView()
                     .font(.title)
                     .tabItem {
                         VStack {
@@ -55,7 +55,7 @@ struct HomeView: View {
                     .navigationBarTitle("")
                     .edgesIgnoringSafeArea([.top, .bottom])
                     .navigationBarBackButtonHidden(true)
-                Text("Fourth View")
+                NotesView()
                     .font(.title)
                     .tabItem {
                         VStack {

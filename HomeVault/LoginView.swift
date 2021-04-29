@@ -48,9 +48,14 @@ struct LoginView: View {
                         .foregroundColor(.black)
                         .colorScheme(.light)
                     Button(action: {
+                        if (!(serverip.hasPrefix("https://") || serverip.hasPrefix("http://")))
+                        {
+                            serverip = "http://" + serverip
+                        }
+                        
                         UserDefaults.standard.setLoginInfo(serverip: serverip, username: username, password: password)
                         
-                        let serverUrl = URL(string: "http://" + serverip + "/mobile_methods/auth.php")
+                        let serverUrl = URL(string: serverip + "/mobile_methods/auth.php")
                         
                         var request = URLRequest(url:serverUrl!)
                                 
