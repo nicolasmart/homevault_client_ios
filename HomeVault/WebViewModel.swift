@@ -15,9 +15,11 @@ class WebViewModel: ObservableObject {
     
     var url: String
     var darkMode: String
+    var directory: String = ""
     
-    init(url: String, darkMode: String) {
+    init(url: String, darkMode: String, directory: String = "") {
         self.url = url
         self.darkMode = darkMode
+        self.directory = directory
     }
 }

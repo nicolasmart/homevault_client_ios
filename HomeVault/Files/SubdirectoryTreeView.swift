@@ -60,7 +60,7 @@ struct SubdirectoryTreeView: View {
             }) {
                 HStack {
                     Image(systemName: "plus").padding(.horizontal, 4.3)
-                    Text("New Folder").font(.system(size: 18))
+                    Text("Add").font(.system(size: 18))
                     Spacer()
                 }
             }

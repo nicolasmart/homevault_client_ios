@@ -11,6 +11,7 @@ import SwiftUI
 struct DirectoryCreateView: View {
     @Binding var isPresented: Bool
     @State private var folder_name = ""
+    @Environment(\.colorScheme) var colorScheme
     
     var directory = ""
     
@@ -19,6 +20,9 @@ struct DirectoryCreateView: View {
             VStack{
                 Text("The folder will be created in the currently selected directory.").frame(maxWidth: .infinity, alignment: .leading).font(.system(size: 18)).padding().padding(.horizontal, 2)
                 TextField("Folder Name", text: self.$folder_name).font(.system(size: 18)).padding().background(Color.black.opacity(0.1)).cornerRadius(7).padding(.horizontal)
+                Text("Upload File").font(Font.headline.weight(.semibold)).frame(maxWidth: .infinity, alignment: .center).font(.system(size: 18)).padding().padding(.horizontal, 2)
+                Text("The file will be uploaded in the currently selected directory.").frame(maxWidth: .infinity, alignment: .leading).font(.system(size: 18)).padding(.horizontal).padding(.horizontal, 2)
+                WebViewContainer(webViewModel: WebViewModel(url: UserDefaults.standard.getLoginInfo(key: "server_ip") + "/mobile_methods/file_upload_view.php", darkMode: colorScheme == .dark ? "1" : "0", directory: directory))
                 Spacer()
             }.navigationBarTitle(Text("New Folder"), displayMode: .inline)
             .navigationBarItems(leading:

@@ -22,6 +22,7 @@ struct WebViewContainer: UIViewRepresentable {
             return WKWebView()
         }
         let darkMode = self.webViewModel.darkMode
+        let directory = self.webViewModel.directory
                 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -29,7 +30,8 @@ struct WebViewContainer: UIViewRepresentable {
         let params = [
                 "username": UserDefaults.standard.getLoginInfo(key: "username"),
                 "password": UserDefaults.standard.getLoginInfo(key: "password"),
-                "dark_mode": darkMode
+                "dark_mode": darkMode,
+                "directory": directory
         ]
         let postString = self.getPostString(params: params)
         request.httpBody = postString.data(using: String.Encoding.utf8)
